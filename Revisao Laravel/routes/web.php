@@ -20,3 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('users', 'UserController@index');
+Route::get('users/{user}', 'UserController@show');
+
+Route::get('bicycles', 'BicycleController@index');
+Route::get('bicycles/{bicycle}', 'BicycleController@show');
+
+Route::get('countries', 'CountryController@index');
+Route::get('countries/{country}', 'CountryController@show');
